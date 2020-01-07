@@ -127,10 +127,18 @@ namespace PlatformGameLinhH
                 {
                     tmrTimer.Stop();
                     MessageBox.Show("You Win");
-                    // restart the game
-                    Application.Restart();
                 }
             }
+        }
+
+        private void PictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PictureBox4_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

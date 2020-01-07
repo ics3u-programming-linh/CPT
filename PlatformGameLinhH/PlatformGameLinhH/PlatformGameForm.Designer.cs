@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPlatformGame));
             this.picPlatform = new System.Windows.Forms.PictureBox();
             this.picPlayer = new System.Windows.Forms.PictureBox();
             this.tmrTimer = new System.Windows.Forms.Timer(this.components);
@@ -41,6 +42,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.picPoints = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picPlatform)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlatform3)).BeginInit();
@@ -51,6 +53,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPoints)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // picPlatform
@@ -81,7 +84,7 @@
             // picPlatform3
             // 
             this.picPlatform3.BackColor = System.Drawing.Color.Brown;
-            this.picPlatform3.Location = new System.Drawing.Point(73, 233);
+            this.picPlatform3.Location = new System.Drawing.Point(73, 242);
             this.picPlatform3.Name = "picPlatform3";
             this.picPlatform3.Size = new System.Drawing.Size(132, 36);
             this.picPlatform3.TabIndex = 2;
@@ -110,10 +113,12 @@
             // 
             // picDoor
             // 
-            this.picDoor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.picDoor.Location = new System.Drawing.Point(39, 12);
+            this.picDoor.BackColor = System.Drawing.Color.Transparent;
+            this.picDoor.Image = ((System.Drawing.Image)(resources.GetObject("picDoor.Image")));
+            this.picDoor.Location = new System.Drawing.Point(25, 12);
             this.picDoor.Name = "picDoor";
-            this.picDoor.Size = new System.Drawing.Size(46, 64);
+            this.picDoor.Size = new System.Drawing.Size(60, 82);
+            this.picDoor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picDoor.TabIndex = 5;
             this.picDoor.TabStop = false;
             // 
@@ -130,7 +135,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Brown;
-            this.pictureBox2.Location = new System.Drawing.Point(259, 130);
+            this.pictureBox2.Location = new System.Drawing.Point(246, 135);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(132, 36);
             this.pictureBox2.TabIndex = 7;
@@ -140,7 +145,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Brown;
-            this.pictureBox3.Location = new System.Drawing.Point(25, 65);
+            this.pictureBox3.Location = new System.Drawing.Point(25, 94);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(132, 36);
             this.pictureBox3.TabIndex = 8;
@@ -157,6 +162,18 @@
             this.picPoints.TabStop = false;
             this.picPoints.Tag = "coin";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(-3, -2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(489, 612);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 10;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.PictureBox4_Click_1);
+            // 
             // frmPlatformGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,6 +189,7 @@
             this.Controls.Add(this.picPlatform3);
             this.Controls.Add(this.picPlayer);
             this.Controls.Add(this.picPlatform);
+            this.Controls.Add(this.pictureBox4);
             this.Name = "frmPlatformGame";
             this.Text = "Platform Game";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keyisdown);
@@ -186,6 +204,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPoints)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -204,6 +223,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox picPoints;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
 
